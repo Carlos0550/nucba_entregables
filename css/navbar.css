@@ -89,3 +89,15 @@ ol,ul{
     color: #ffffff;
     filter: drop-shadow(#7D8491 0px 0px 5px);
 }
+@media(max-width: 768px){
+    .nav{
+        justify-content: end;
+        width: 50%;
+    }
+    .link{
+        font-size: 1em;
+    }
+    .ul__links{
+        gap: .3em;
+    }
+}
