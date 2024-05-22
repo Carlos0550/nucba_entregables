@@ -41,9 +41,6 @@ ol,ul{
 }
 
 
-.menu_hamburguesa{
-    display: none;
-}
 
 .header{
     height: var(--altura_header);
