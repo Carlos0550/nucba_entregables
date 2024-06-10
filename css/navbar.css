@@ -40,11 +40,10 @@ ol,ul{
     right: auto;    
 }
 
-
-
 .header{
     height: var(--altura_header);
-    background-color: #eaf0ce;
+    background-color: #795548 ;
+    color: white;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 1px );
     -webkit-backdrop-filter: blur( 1px );
@@ -56,10 +55,20 @@ ol,ul{
     padding: 0 var(--padding_left_right);
     position:sticky;
     z-index: 100;
+    animation: slideDown 1s ease-in-out;
+}
+@keyframes slideDown {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 .nav{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -78,7 +87,7 @@ ol,ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1F1A38;
+    color: #ffffff;
     font-weight: bold;
     margin-right: var(--padding-left_rigth);
     font-size: 1.3em;

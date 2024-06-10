@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.section-hero {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff3e0;
+    color: #5d4037;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: showHero 1s ease-in-out;
+}
+
+.div__title-hero {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.div__title-hero h2 {
+    font-size: 2em;
+    margin: 0 0 10px;
+    background: linear-gradient(60deg, #FF7601, #611401);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.div__title-hero p {
+    font-size: 1.2em;
+    margin: 0;
+}
+.buttons {
+    display: flex;
+    margin-top: 1em;
+    gap: 10px;
+}
+
+.div__title-hero button {
+    background-color: #c53d13; /* Rojo ladrillo */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.div__title-hero button:last-child{
+    background-color: #ff7044;
+}
+
+.div__title-hero button:hover {
+    background-color: #b33a13; /* Rojo más oscuro al pasar el mouse */
+}
+
+.img__hero {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideLeft 1s ease-in-out;
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes showHero {
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div__title-hero {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.section-about{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff3e0;
+    color: #5d4037;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideRight 1s ease-in-out;
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
