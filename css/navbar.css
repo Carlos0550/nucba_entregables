@@ -22,12 +22,7 @@ ol,ul{
     border: 1px solid black;
 }
 
-.logo__title{
-    color: var(--color_blanco);
-    font-size: 1em;
-    margin-right: .5em; 
-    position: absolute;
-}
+
 .logo__img{
     width: 70px;
     height: auto;
@@ -79,6 +74,7 @@ ol,ul{
     display: flex;
     flex-direction: row;
     list-style:none;
+    
     margin-right: var(--padding-left_rigth);
     gap: 1em;
 }
@@ -98,15 +94,38 @@ ol,ul{
     color: #ffffff;
     filter: drop-shadow(#7D8491 0px 0px 5px);
 }
+.toggle-menu__label, .toggle_menu{
+    display: none;
+}
+
 @media(max-width: 768px){
-    .nav{
-        justify-content: end;
-        width: 50%;
+    /* .toggle-menu__label{
+        display: block;
+        margin-right: .5em;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
     }
-    .link{
-        font-size: 1em;
+    .toggle-menu__label:hover{
+        transform: scale(1.1);
+    }
+    .toggle-menu__label:active{
+        transform: scale(0.9);
+    } */
+
+    .logo__img{
+        display: none;
     }
     .ul__links{
-        gap: .3em;
+        position: absolute;
+        left: 15px;
     }
+    
+}
+@media(max-width: 300px){
+   
+    .ul__links{
+        position: absolute;
+        left: 15px;
+    }
+    
 }
