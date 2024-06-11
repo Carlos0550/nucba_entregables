@@ -7,9 +7,10 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
+    margin-top: 1em;
     align-items: center;
     justify-content: center;
-    background-color: #fff3e0;
+    background-color: #ffe1b2;
     color: #5d4037;
     padding: 20px;
     border-radius: 10px;
@@ -107,7 +108,7 @@
     margin-top: 1em;
     align-items: center;
     justify-content: center;
-    background-color: #fff3e0;
+    background-color: #ffe1b2;;
     color: #5d4037;
     padding: 20px;
     border-radius: 10px;
