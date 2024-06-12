@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 html{
-   overflow-x: hidden; 
+   overflow-x:hidden; 
 }
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
     
 }
 .section-hero {
@@ -43,7 +44,7 @@ body{
 
 .div__title-hero p {
     font-size: 1.5em;
-
+    
     margin: 0;
 }
 
@@ -73,11 +74,11 @@ body{
 }
 
 .img__hero {
-    max-width: 350px;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideLeft 500ms ease-in-out;
+    animation: slideLeft 450ms ease-in-out;
 }
 
 .section-about {
@@ -94,7 +95,7 @@ body{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideRight 500ms ease-in-out;
+    animation: slideRight 450ms ease-in-out;
 }
 
 

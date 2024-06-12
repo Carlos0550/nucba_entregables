@@ -9,7 +9,7 @@
 }
 
 #classic {
-    animation: zoomIn 200ms ease-in-out 1 forwards;
+    animation: zoomIn 300ms ease-in-out 1 forwards;
 }
 @keyframes zoomIn {
     from {
@@ -184,7 +184,7 @@
         justify-content: center;
         transform: translateX(110vw);
         animation: slideOut 500ms ease-in-out 1 forwards;
-
+        overflow: auto;
     }
 
     @keyframes slideOut {
