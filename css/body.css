@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "roboto";
 }
 html{
    overflow-x:hidden; 
+   
 }
 body{
     display: flex;
@@ -103,6 +107,7 @@ body{
 }
 
 
+
 @keyframes slideLeft {
     0% {
         transform: translateX(-100%);
@@ -150,4 +155,106 @@ body{
         margin-bottom: 20px;
     }
     
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    background-color: #ffe1b2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cards-title{
+    font-size: clamp(1rem, 2.5vw, 2rem); 
+    text-align: center;
+    padding: 1em;
+    background: linear-gradient(60deg, #FF7601, #611401);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cards__div{
+    display: flex;
+    flex-wrap: wrap;
+     height: auto;
+     gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+}
+.card{
+    margin-top: 1em;
+    padding: .5em;
+    width: min-content;
+    background: rgba(255, 255, 255, 0.671);
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
+}
+.card__title{
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    background: linear-gradient(300deg, #440e00, #ff8922);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card__description{
+    font-size: clamp(1rem, 1.2vw, 2rem);
+    font-weight: 500;
+    font-family: "Open Sans";
+}
+.cards__div picture{
+    width: 20rem;
+    margin-top: 1em;
+    aspect-ratio: 1/1;
+    display: flex;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+.cards__div picture img{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    /*Para que la imagen no se estire mas alla de lo que mide su contenedor*/
+    object-fit: cover;
+}
+
+.card__opinion-container{
+    width: min-content;
+    background: rgba(255, 161, 21, 0.671);
+    border-radius: 10px;
+    padding: .5em;
+    margin-top: .5em;
+}
+.card__opinion-p{
+    font-weight: 600;
+    font-family: "Open Sans";
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    padding: .5em;
+}
+.footer div{
+    color: white;
+    text-align: center;
+}
+.footer__dev{
+    text-shadow: 0 0 10px white;
+    text-decoration: underline;
+    text-decoration-style: wavy; /* Estilo del subrayado: solid, double, dotted, dashed, wavy */
+
 }
