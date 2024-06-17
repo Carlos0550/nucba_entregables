@@ -37,6 +37,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: showHero 500ms ease-in-out;
+    
 }
 @media(max-width:768px){
     .section-hero{
@@ -44,12 +45,12 @@ body {
     }
 }
 .div__title-hero {
-    max-width: 600px;
+    max-width: 1000px;
     margin-right: 20px;
 }
 
 .div__title-hero h2 {
-    font-size: 2em;
+    font-size: clamp(2rem, 4.5vw, 6rem);
     margin: 0 0 10px;
     background: linear-gradient(60deg, #FF7601, #611401);
     background-clip: text;
@@ -117,14 +118,16 @@ body {
 }
 
 .section-about h2 {
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 
     background: linear-gradient(360deg, #FF7601, #611401);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.section-about p{
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
 
 @keyframes slideLeft {
     0% {
@@ -166,11 +169,14 @@ body {
     .section-hero {
         flex-direction: column;
         text-align: center;
+        transition: all .5s ease-in-out;
     }
 
     .div__title-hero {
         margin-right: 0;
         margin-bottom: 20px;
+        transition: all 1s ease-in-out;
+
     }
 
 }
