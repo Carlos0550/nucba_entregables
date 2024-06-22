@@ -27,14 +27,12 @@ body {
     display: flex;
     width: 100%;
     margin: 0 auto;
-    margin-top: 1em;
     align-items: center;
     justify-content: center;
     background-color: #ffe1b2;
     color: #5d4037;
     padding: 20px;
     padding-top: 100px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: showHero 500ms ease-in-out;
     
@@ -102,17 +100,15 @@ body {
 .section-about {
     display: flex;
     flex-direction: column;
-    font-size: 1.1em;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     width: 100%;
     margin: 0 auto;
-    margin-top: 1em;
     align-items: center;
     justify-content: center;
     background-color: #ffe1b2;
     ;
     color: #5d4037;
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideRight 450ms ease-in-out;
 }
@@ -187,9 +183,6 @@ body {
     width: 100%;
     height: auto;
     background-color: #ffe1b2;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -299,7 +292,6 @@ body {
     background-color: #ffe1b2;
     width: 100%;
     padding: 1em;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
