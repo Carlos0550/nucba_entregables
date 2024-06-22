@@ -38,6 +38,7 @@
     padding: .5em;
     margin-top: 1em;
     transition: all 300ms ease-in-out;
+    z-index: 99;
 
 }
 

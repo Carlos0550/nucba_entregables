@@ -19,8 +19,10 @@ body {
     align-items: center;
     overflow-x: hidden;
 
-    background: #BB6032;
-    background: linear-gradient(135deg, #BB6032, #A90545);
+    background: #ffb347;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffcc33, #ffb347);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffcc33, #ffb347); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .section-hero {
@@ -31,15 +33,69 @@ body {
     justify-content: center;
     background-color: #ffe1b2;
     color: #5d4037;
-    padding: 20px;
-    padding-top: 100px;
+    margin-top: 5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: showHero 500ms ease-in-out;
     
 }
+.custom-shape-divider-hero {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 10;
+    transform: rotate(360deg);
+
+}
+
+.custom-shape-divider-hero svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 84px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-hero .shape-fill {
+    fill: #FFE1B2;
+}
+
 @media(max-width:768px){
     .section-hero{
-        padding-top: 20px;
+        padding: 1rem;
+    }
+}
+
+@media(min-width:768px){
+    .section-hero{
+        padding: 1rem;
+        margin-top: 15rem;
+        
+        padding-top: 1rem;
+    }
+    .custom-shape-divider-hero {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 10;
+        transform: rotate(360deg);
+        z-index: 0;
+    
+    }
+    
+    .custom-shape-divider-hero svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 84px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-hero .shape-fill {
+        fill: #FFE1B2;
     }
 }
 .div__title-hero {
@@ -103,18 +159,47 @@ body {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     width: 100%;
     margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 1rem;
     align-items: center;
     justify-content: center;
     background-color: #ffe1b2;
-    ;
     color: #5d4037;
-    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideRight 450ms ease-in-out;
+    position: relative;
+    
+}
+/****************/
+
+.custom-shape-divider-about {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transition: all 500ms ease-in-out;
+
+
+}
+
+.custom-shape-divider-about svg {
+    position: relative;
+    display: block;
+    width: calc(50% + 50%);
+    height: 120px;
+    transform: rotateY(360deg);
+    transition: all 500ms ease-in-out;
+}
+
+.custom-shape-divider-about .shape-fill {
+    fill: #ffe1b2;
 }
 
 .section-about h2 {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-size: clamp(1rem, 2.5vw, 2rem);
 
     background: linear-gradient(360deg, #FF7601, #611401);
     background-clip: text;
@@ -124,7 +209,42 @@ body {
 .section-about p{
     font-size: clamp(1rem, 1.5vw, 2rem);
 }
+@media(min-width:768px){
+    .custom-shape-divider-about{
+        top: -100px;
+    }
+}
+@media(max-width:1000px){
+    .section-about{
+        
+        padding: 1rem;
+        padding-top: 1rem;
+        margin-top: 0;
 
+    }
+    .custom-shape-divider-about {
+        position: absolute;
+        top: -175px;
+        display: none;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    
+    }
+    
+    .custom-shape-divider-about svg {
+        position: relative;
+        display: none;
+        width: calc(300% + 10%);
+        height: 180px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-about .shape-fill {
+        fill: #FFE1B2;
+    }
+}
 @keyframes slideLeft {
     0% {
         transform: translateX(-100%);
@@ -181,10 +301,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 1rem;
     height: auto;
     background-color: #ffe1b2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .cards-title {
     font-size: clamp(1rem, 2.5vw, 2rem);
